@@ -1,0 +1,64 @@
+<!-- activity_main.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/llAddItem" />
+
+    <LinearLayout
+        android:id="@+id/llAddItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:hint="@string/name"
+            android:inputType="text"
+            android:minWidth="100dp"
+            android:minHeight="48dp"
+            android:textColorHint="#546E7A" />
+
+        <EditText
+            android:id="@+id/editPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:hint="@string/price"
+            android:inputType="numberDecimal"
+            android:minWidth="100dp"
+            android:minHeight="48dp"
+            android:textColorHint="#546E7A" />
+
+        <EditText
+            android:id="@+id/editURL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:autofillHints=""
+            android:hint="@string/url"
+            android:inputType="textUri"
+            android:minWidth="200dp"
+            android:minHeight="48dp"
+            android:textColorHint="#546E7A" />
+
+        <Button
+            android:id="@+id/btnAddItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add" />
+
+    </LinearLayout>
+</RelativeLayout>
